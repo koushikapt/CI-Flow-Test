@@ -1,0 +1,25 @@
+﻿@using App.Core.Models.View
+@model LoginViewModel
+@using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }))
+{
+    <h4>Sign In</h4>
+    @Html.ValidationSummary()
+    @Html.AntiForgeryToken()
+    <fieldset>
+        @Html.LabelFor(model => model.Username)
+        @Html.TextBoxFor(model => model.Username, new { autofocus = "autofocus" })
+        @Html.ValidationMessageFor(model => model.Username)
+    </fieldset>
+    <fieldset>
+        @Html.LabelFor(model => model.Password)
+        @Html.PasswordFor(model => model.Password, new { autocomplete = "off" })
+        @Html.ValidationMessageFor(model => model.Password)
+    </fieldset>
+    <fieldset>
+        @Html.LabelFor(model => model.RememberMe)
+        @Html.CheckBoxFor(model => model.RememberMe)
+    </fieldset>
+    <footer>
+        <button name="Login">LOG IN</button>
+    </footer>
+}
