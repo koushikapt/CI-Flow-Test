@@ -2,7 +2,7 @@
 {
     /// <summary>
     /// Provide public application common information.
-    /// Test comment b b nb 
+    /// Test comment
     /// </summary>
     public static class Common
     {
