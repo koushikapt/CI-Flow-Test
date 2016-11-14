@@ -2,7 +2,7 @@
 {
     /// <summary>
     /// Provide public application common information.
-    /// Checkin#3
+    /// Checkin#3 
     /// </summary>
     public static class Common
     {
